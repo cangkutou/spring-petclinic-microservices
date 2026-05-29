@@ -7,10 +7,13 @@
     "ghcr.io/devcontainers/features/java:1": {
       "installMaven": "true",
       "installGradle": "false"
-    },
-    "ghcr.io/devcontainers/features/azure-cli:1":{}, // Install Azure CLI
-    "ghcr.io/devcontainers/features/docker-in-docker:2":{}, // install docker
+    }
+  // "ghcr.io/devcontainers/features/azure-cli:1":{}, // Install Azure CLI
+  // "ghcr.io/devcontainers/features/docker-in-docker:2":{}, // install docker
   },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
   "customizations": {
     // Configure properties specific to VScode
     "vscode": {
